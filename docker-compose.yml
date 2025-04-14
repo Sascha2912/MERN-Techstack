@@ -1,0 +1,32 @@
+version: "3.8"
+services:
+  mongodb:
+    image: mongo:latest
+    container_name: mongodb
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo-data:/data/db
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root  # Optional (für Auth)
+      MONGO_INITDB_ROOT_PASSWORD: password  # Optional (für Auth)
+    networks:
+      - mern-network
+
+  backend:
+    build: ./backend
+    ports:
+      - "3001:3000"
+    environment:
+      MONGODB_URI: "mongodb://root:password@localhost:27017/mein-db?authSource=admin"
+    depends_on:
+      - mongodb
+    networks:
+      - mern-network
+
+volumes:
+  mongo-data:
+
+networks:
+  mern-network:
+    driver: bridge
