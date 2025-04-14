@@ -1,4 +1,5 @@
 Befehle:
+
     root-verzeichnis:
     docker-compose up -d --build
     docker-compose down
