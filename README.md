@@ -1,3 +1,20 @@
+Befehle:
+    root-verzeichnis:
+    docker-compose up -d --build
+    docker-compose down
+
+    backend-verzeichnis:
+    npm run start
+    npm run dev
+    npm run test
+
+    frontend-verzeichnis:
+    npm run dev
+    npm run build
+    npm run lint
+    npm run preview
+
+
 Key Structural Components:
 
 /  
