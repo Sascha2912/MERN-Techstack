@@ -1,3 +1,22 @@
+Projekt initialisieren:
+
+    1. Backend:
+        1.1 Die .env.example kopieren und in .env umbenennen.
+        1.2 Im backend Verzeichnis npm install ausführen.
+
+    2. Frontend:
+        2.1 Die .env.example kopieren und in .env umbenennen.
+        2.2 Im frontend Verzeichnis npm install ausführen.
+        2.3 Im frontend Verzeichnis npm run dev ausführen.
+
+    3. Root:
+        3.1 docker-compose up -d --build ausführen.
+
+    4. Backend:
+        4.1 Im backend Verzeichnis npm run start ausführen.
+        4.2 Im Browser unter http://localhost:3000/test die Verbindung zum Server und der Datenbank testen.
+        4.3 Test Code aus der server.js entfernen.
+
 Befehle:
 
     root-verzeichnis:

@@ -22,7 +22,7 @@ mongoose.connect(process.env.MONGODB_URI)
 // Routen
 app.get('/', (req, res) => res.send('Backend läuft.'));
 
-// Beispiel-Route (nach der MongoDB-Verbindung)
+// Test-Code zum überprüfen der Datenbank-Verbindung
 app.get('/test', async (req, res) => {
     console.log('Route /test wurde aufgerufen'); // 👈 Debug-Log
     try {
